@@ -12,7 +12,7 @@ Klasa ta powinna zawierac (jako protected):
 
 ### Poza skladowymi prosze o zaimplementowanie nastepujacych metod:
 1. Metody stale `size()`, `capacity()`, `data()` ktore zwroca powyzsze skladowe
-    1. size() ma zwracac rozmiar bez znaku konca tekstu
+    1. `size()` ma zwracac rozmiar bez znaku konca tekstu
     2. Prosze o napisanie metody stalej `c_str()`, ktora zwroci zawartosc skladowej `data_`,
        ale zakonczona znakiem konca tekstu. W razie problemow mozna uzyc `mutable`.
     3. Jeśli gettery definiujemy w pliku nagłówkowym to możemy jako typ zwracany zastosować `auto`
@@ -20,25 +20,26 @@ Klasa ta powinna zawierac (jako protected):
     - wszystkie ustawienia na liście inicjalizacyjnej
     - standard dopuszcza `new char[0];`
 3. Konstruktor przyjmujący tekst i dokonujący jego "głęboką" kopię, czyli:
-   ```SimpleString(const char* text);```
+   `SimpleString(const char* text);`
 4. Konstruktor kopiujący, wykonujący "głęboką" kopię, czyli:
-   ```SimpleString(const SimpleString& text);```
+   `SimpleString(const SimpleString& text);`
 5. Destruktor zwalniający pamięć
-6. Metode statyczna `instances()`, ktora zwroci powyzszą skladowa statyczna
+6. Metode statyczna `instances()`, ktora zwroci skladowa statyczna `instances_`
 7. Proszę o napisanie metody `assign(const char* new_text)` ustawiajacej nowa zawartosc,
    dokonującej głębokiej kopii
     1. **Prosze pamietac aby zwolnic stara pamiec!**
-8. Prosze o napisanie metody `equal_to`, ktora przyjmie drugi SimpleString
+8. Prosze o napisanie metody `equal_to`, ktora przyjmie drugi obiekt `SimpleString`
    i sprawdzi czy zawieraja to samo.
     1. Funkcja ta powinna przyjmowac jeszcze argument `bool case_sensitive=true`
        w oparciu o ktory porownanie bedzie ignorowac lub nie wielkosc znakow.
        1. Można się posiłkować: [tolower](https://en.cppreference.com/w/cpp/string/byte/tolower)
        2. Osoby bardziej zaawansowane mogą zaszaleć z `std::equal`.
-9. Prosze o napisanie metody `append`, ktora przyjmuje drugi SimpleString,
+9. Prosze o napisanie metody `append`, ktora przyjmuje drugi `SimpleString`,
     a po jej zawolaniu jego zawartosc zostanie dodana do zawartosci `this`.
 10. Proszę o zdefiniowanie metody `SimpleString substr(size_t pos = 0, size_t count = npos) const`,
     która wykona kopię tekstu aktualnego tekstu od zadanej pozycji o podanej ilości znaków
     (ale jak tekst jest krótszy to krótszej)
+    - `std::string::npos` jest to wartość używana przez `std::string` do oznaczenia iż np. szukany tekst nie został znaleziony. Jest to w praktyce największa wartość, jaką może pomieścić typ służący do indeksowania w typie `std::string`. Czyli tak właściwie jest to `std::numeric_limits<std::size_t>::max()` (nagłówek `#include <limits>`), albo krócej: `static_cast<std::size_t>(-1)`.
 11. Proszę o zdefiniowanie metody `int compare() const`, która będzie porównywała dwa teksty, w następujący sposób:
     - jeśli są równe to aby zwróciła 0
     - jeśli pierwszy tekst jest mniejszy to aby zwróciła wartość ujemną
@@ -55,7 +56,7 @@ ________________________________________________________________________________
 `std::string` ani `std::string_view` ani innych specjalizacji `std::basic_string<...>`!
 
 ### Uwaga2: Prosze upewnic sie, ze nie ma wyciekow pamieci.
-Za wycieki pamięci punkty będą odejmowane
+Za wycieki pamięci punkty będą odejmowane (bobot korzysta z narzędzia `valgrind`)
 ____________________________________________________________________________________
 ### Prosze po zaimplementowaniu przypatrzyc sie dokumentacji
 `std::string` i porownac metody z `SimpleString`.
@@ -73,24 +74,13 @@ Informacje jak czytać testy znajdują się w materiale [wideo](https://banbye.c
 7. Omówienie testów - co trzeba zrobić aby jakieś zaczęły działać, własne operatory `new[]` i `delete[]`, cytaty motywacyjne
 
 ____________________________________________________________________________________
-## Do rozwazenia dla zaawansowanych:
-1. Zaimplementowac copy-on-write - wtedy mozna te sugerowane skladowe zastapic.
-2. W ktorych sytuacjach wygodnie byloby przeciazyc operatory?
-3. Do czego jest `std::string_view`?
-4. `std::string` ma definicje typu `value_type` - co nam to daje?
-5. Prosze o zdefiniowanie metody `void load(std::istream& is)` (lub operator>>),
-   ktora wczyta tekst dowolnej dlugosci z klawiatury
-6. Jak zrobic metode `assign` aby uniknac niepotrzebnych alokacji i deallokacji pamieci?
-7. Jak zrobic metody `assign` i `append` aby byly odporne na wyrzucenie wyjatku?
-8. Jak wszystko zadziala mozna uzyc `std::unique_ptr`
-____________________________________________________________________________________
 ## Uwaga:
 1. Wszystkie atrybuty powinny być prywatne, konstruktory i metody - publiczne
 2. Metody większe niż 1-linijkowe powinny być zadeklarowane w klasie,
    zdefiniowane poza klasą w pliku zrodlowym
 3. Obiekty typów klasowych powinny być w miarę możliwości przekazywane
    w argumentach funkcji przez referencję do stalej,
-4. Proszę stosować słówko "const" w odpowiednich miejscach.
+4. Proszę stosować słówko "`const`" w odpowiednich miejscach.
 5. W pliku zrodlowym prosze nie wlaczac dodatkowych naglowkow typu:
    <iostream>, <algorithm> - takie rzeczy powinny byc w pliku zrodlowym
 6. Prosze aby w pliku naglowkowym nie bylo `using namespace std;`, w zrodlowym moze.
@@ -99,11 +89,24 @@ ________________________________________________________________________________
 w argumentach funkcji przez referencję, proszę też stosować słówko "const" w odpowiednich miejscach.
 Metody wspólne dla wszystkich klas jako statyczne. Jeśli zwracamy stałą czasu kompilacji aby była to metoda `constexpr`.
 9. Sugeruję unikać metod niestandardowych (bobot działa na Linuxie, metody z windowsa nie zadziałają).
+Mimo iż bobot działa na Linuxie sugeruję nie używać również niestandardowych funkcji linuxowych np. [strdupa](https://pl.manpages.org/strndupa/3).
 10. Jaka jest roznica miedzy `delete` a `delete []`?
 
 Mozna tworzyc dowolna ilosc metod pomocniczych, jednakze aby byly one prywatne.
 
 [Bardziej szczegółowe informacje jak pisać programy w ładnym stylu](https://programowaniec.wordpress.com/2017/11/09/czego-sie-czepiam/) dla zaawansowanych.
+
+____________________________________________________________________________________
+## Do rozwazenia dla zaawansowanych:
+1. Zaimplementowac copy-on-write - wtedy mozna te sugerowane skladowe zastapic.
+2. W ktorych sytuacjach wygodnie byloby przeciazyc operatory?
+3. Do czego jest `std::string_view`?
+4. `std::string` ma definicje typu `value_type` - co nam to daje?
+5. Prosze o zdefiniowanie metody `void load(std::istream& is)` (lub `operator>>`),
+   ktora wczyta tekst dowolnej dlugosci z klawiatury
+6. Jak zrobic metode `assign` aby uniknac niepotrzebnych alokacji i deallokacji pamieci?
+7. Jak zrobic metody `assign` i `append` aby byly odporne na wyrzucenie wyjatku?
+8. Jak wszystko zadziala mozna uzyc `std::unique_ptr`
 
 ____________________________________________________________________________________
 ## Ocenianie:

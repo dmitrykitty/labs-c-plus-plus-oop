@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.16)
-project(lab4SimpleString)
+cmake_minimum_required(VERSION 3.19)
+project(lab4SimpleString_forStudents)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -9,16 +9,31 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CheckCXXCompilerFlag)
     CHECK_CXX_COMPILER_FLAG("/std:c++latest" _cpp_latest_flag_supported)
     if (_cpp_latest_flag_supported)
-        add_compile_options("/std:c++latest")
+        add_compile_options("/std:c++latest /Wall /WX")
     endif()
 else()
-    set(CMAKE_CXX_FLAGS "--std=c++23 -Wall -Wextra -pedantic")
+    set(CMAKE_CXX_FLAGS "--std=c++${CMAKE_CXX_STANDARD} -Wall -Wextra -pedantic -Wno-error=deprecated-declarations")
     set(COMPILER_DEBUG_FLAGS "-D_DEBUG")
     set(COMPILER_RELEASE_FLAGS "-O3 -DNDEBUG")
-    set(LINKER_FLAGS "--std=c++23")
+    set(LINKER_FLAGS "--std=c++${CMAKE_CXX_STANDARD}")
 endif()
 
 set(CMAKE_BUILD_TYPE Debug)
+
+# Na Linuxie dla kompilatorow g++ i Clang moga byc dostepne sanitizery:
+if (NOT CMAKE_SYSTEM_NAME MATCHES "Windows" AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    include(CheckLibraryExists)
+
+    check_library_exists(asan __asan_init "" HAVE_LIBASAN)
+    check_library_exists(ubsan __ubsan_handle_add_overflow "" HAVE_LIBUBSAN)
+
+    if (HAVE_LIBASAN AND HAVE_LIBUBSAN)
+        message(STATUS "Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined")
+    else()
+        message(WARNING "Brak wymaganych bibliotek (libasan/libubsan). Możesz je zainstalować: na Fedora przez: sudo yum install libasan libubsan")
+    endif()
+endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # for cppcheck To generate compile_commands.json
 
@@ -31,6 +46,9 @@ endif()
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+set(MAIN_PROJECT_NAME "${PROJECT_NAME}")
+set(PROJECT_BINARY_PATH "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}")
 
 
 file(GLOB SOURCES *.cpp *.cc *.c)

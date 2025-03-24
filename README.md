@@ -1,31 +1,32 @@
 # Zarządzanie pamięcią i operacje tekstowe na przykładzie klasy `SimpleString`
-W zadaniu chodzi o to, aby poćwiczyć alokacje pamięci, operowanie na tekście (również to o co prosił wykładowca pod egzamin), jak również i konstruktory i destruktory (zamierzam ich implementacje dać na kolokwium).
+W tym zadaniu chodzi o przećwiczenie alokacji pamięci, operowania na tekście (również to o co prosił wykładowca pod egzamin), a także konstruktorów i destruktorów (ich implementacja może pojawić się na kolokwium).
 
-Treść do wykonania:
+## Treść zadania:
 ---------
-Proszę o napisanie klasy `SimpleString` opakowujacej dynamicznie allokowana tablice znakow.
-Klasa ta powinna zawierac (jako protected):
-- skladowa statyczna: `std::size_t instances_` liczaca aktualnie zyjace instancje
+Proszę napisać klasę `SimpleString`, opakowującą dynamicznie alokowaną tablicę znaków (`char`).
+
+### Składowe klasy (jako protected):
+- skladowa statyczna: `std::size_t instances_` licząca aktualnie żyjące instancje
 - sugerowana skladowa: `char* data_` wskazująca na dynamicznie zaalokowany obszar z tekstem
 - sugerowana skladowa: `std::size_t size_` zawierajaca informacje ile znakow trzyma aktualny tekst
 - sugerowana skladowa: `std::size_t capacity_` zawierajaca informacje ile znakow pomiesci aktualny bufor bez realokazji
 
 ### Poza skladowymi prosze o zaimplementowanie nastepujacych metod:
-1. Metody stale `size()`, `capacity()`, `data()` ktore zwroca powyzsze skladowe
-    1. size() ma zwracac rozmiar bez znaku konca tekstu
+1. Metody stale `size()`, `capacity()`, `data()` ktore zwrócą powyzsze skladowe
+    1. `size()` ma zwracac rozmiar bez znaku konca tekstu
     2. Prosze o napisanie metody stalej `c_str()`, ktora zwroci zawartosc skladowej `data_`,
-       ale zakonczona znakiem konca tekstu. W razie problemow mozna uzyc `mutable`.
+       ale zakonczona znakiem konca tekstu. W razie problemow można użyc `mutable`.
     3. Jeśli gettery definiujemy w pliku nagłówkowym to możemy jako typ zwracany zastosować `auto`
 2. Konstruktor bezargumentowy
     - wszystkie ustawienia na liście inicjalizacyjnej
     - standard dopuszcza `new char[0];`
 3. Konstruktor przyjmujący tekst i dokonujący jego "głęboką" kopię, czyli:
-   ```SimpleString(const char* text);```
+   `SimpleString(const char* text);`
 4. Konstruktor kopiujący, wykonujący "głęboką" kopię, czyli:
-   ```SimpleString(const SimpleString& text);```
+   `SimpleString(const SimpleString& text);`
 5. Destruktor zwalniający pamięć
-6. Metode statyczna `instances()`, ktora zwroci powyzszą skladowa statyczna
-7. Proszę o napisanie metody `assign(const char* new_text)` ustawiajacej nowa zawartosc,
+6. Metode statyczna `instances()`, która zwróci składowa statyczną `instances_`
+7. Proszę o napisanie metody `assign(const char* new_text)` ustawiajacej nową zawartosc,
    dokonującej głębokiej kopii
     1. **Prosze pamietac aby zwolnic stara pamiec!**
 8. Prosze o napisanie metody `equal_to`, ktora przyjmie drugi SimpleString
@@ -55,7 +56,7 @@ ________________________________________________________________________________
 `std::string` ani `std::string_view` ani innych specjalizacji `std::basic_string<...>`!
 
 ### Uwaga2: Prosze upewnic sie, ze nie ma wyciekow pamieci.
-Za wycieki pamięci punkty będą odejmowane
+Za wycieki pamięci punkty będą odejmowane (bobot korzysta z narzędzia `valgrind`)
 ____________________________________________________________________________________
 ### Prosze po zaimplementowaniu przypatrzyc sie dokumentacji
 `std::string` i porownac metody z `SimpleString`.
@@ -79,7 +80,7 @@ ________________________________________________________________________________
    zdefiniowane poza klasą w pliku zrodlowym
 3. Obiekty typów klasowych powinny być w miarę możliwości przekazywane
    w argumentach funkcji przez referencję do stalej,
-4. Proszę stosować słówko "const" w odpowiednich miejscach.
+4. Proszę stosować słówko "`const`" w odpowiednich miejscach.
 5. W pliku zrodlowym prosze nie wlaczac dodatkowych naglowkow typu:
    <iostream>, <algorithm> - takie rzeczy powinny byc w pliku zrodlowym
 6. Prosze aby w pliku naglowkowym nie bylo `using namespace std;`, w zrodlowym moze.
@@ -118,15 +119,12 @@ ________________________________________________________________________________
    6. Antyplagiat - za wykrycie plagiatu (jest specjalne narzędzie) otrzymuje się 0 punktów. Wysyłajmy więc swoje!
 ____________________________________________________________________________________
 ## Najczestsze pytania/błędy/problemy:
-1. Czekam na sugestie...
+1. Nie przechodzi test totalnie niezwiązany z czymkolwiek (np. na licznikach obiektów utworzonych/usuniętych)
+    - Problem jest gdzie indziej, trzeba jednak znaleźć gdzie, a to jest najtrudniejsze. Przyczyna problemu jest taka, że gdzieś piszemy poza zaalkowaną pamięcią, ale na tyle nieznacznie, że nasz program się nie wywala. Najprawdopodobniej gdzieś zapomnieliśmy aby zaalokować miejsce na znak końca tekstu, a jest on wstawiany. 
 
 ____________________________________________________________________________________
 # Pytania po implementacji ćwiczenia:
 1. Czego ważnego dla mnie się dzisiaj nauczyłem/nauczyłam?
-
-____________________________________________________________________________________
-# Zadania, które warto zrobić (uwaga: nie będzie za to punktów, tylko coś cenniejszego - umiejętności)
-1. Dodatkowe różnice między systemami zawrzeć w metodach.
 
 ____________________________________________________________________________________
 # Jak skonfigurować sobie pracę nad paczką:

@@ -30,13 +30,13 @@ Proszę napisać klasę `SimpleString`, opakowującą dynamicznie alokowaną tab
 7. Proszę o napisanie metody `assign(const char* new_text)` ustawiajacej nową zawartosc,
    dokonującej głębokiej kopii
     1. **Prosze pamietac aby zwolnic stara pamiec!**
-8. Prosze o napisanie metody `equal_to`, ktora przyjmie drugi SimpleString
+8. Prosze o napisanie metody `equal_to`, ktora przyjmie drugi obiekt `SimpleString`
    i sprawdzi czy zawieraja to samo.
     1. Funkcja ta powinna przyjmowac jeszcze argument `bool case_sensitive=true`
        w oparciu o ktory porownanie bedzie ignorowac lub nie wielkosc znakow.
        1. Można się posiłkować: [tolower](https://en.cppreference.com/w/cpp/string/byte/tolower)
        2. Osoby bardziej zaawansowane mogą zaszaleć z `std::equal`.
-9. Prosze o napisanie metody `append`, ktora przyjmuje drugi SimpleString,
+9. Prosze o napisanie metody `append`, ktora przyjmuje drugi `SimpleString`,
     a po jej zawolaniu jego zawartosc zostanie dodana do zawartosci `this`.
 10. Proszę o zdefiniowanie metody `SimpleString substr(size_t pos = 0, size_t count = npos) const`,
     która wykona kopię tekstu aktualnego tekstu od zadanej pozycji o podanej ilości znaków
@@ -104,7 +104,7 @@ ________________________________________________________________________________
 2. W ktorych sytuacjach wygodnie byloby przeciazyc operatory?
 3. Do czego jest `std::string_view`?
 4. `std::string` ma definicje typu `value_type` - co nam to daje?
-5. Prosze o zdefiniowanie metody `void load(std::istream& is)` (lub operator>>),
+5. Prosze o zdefiniowanie metody `void load(std::istream& is)` (lub `operator>>`),
    ktora wczyta tekst dowolnej dlugosci z klawiatury
 6. Jak zrobic metode `assign` aby uniknac niepotrzebnych alokacji i deallokacji pamieci?
 7. Jak zrobic metody `assign` i `append` aby byly odporne na wyrzucenie wyjatku?

@@ -17,6 +17,7 @@ Proszę napisać klasę `SimpleString`, opakowującą dynamicznie alokowaną tab
     2. Prosze o napisanie metody stalej `c_str()`, ktora zwroci zawartosc skladowej `data_`,
        ale zakonczona znakiem konca tekstu. W razie problemow można użyc `mutable`.
     3. Jeśli gettery definiujemy w pliku nagłówkowym to możemy jako typ zwracany zastosować `auto`
+    4. Standard nie nakazuje, aby metoda `data()` zwracała tekst zakończony znakiem końca tekstu, ale też nie zabrania.
 2. Konstruktor bezargumentowy
     - wszystkie ustawienia na liście inicjalizacyjnej
     - standard dopuszcza `new char[0];`

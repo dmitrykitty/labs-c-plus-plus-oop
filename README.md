@@ -41,6 +41,7 @@ Proszę napisać klasę `SimpleString`, opakowującą dynamicznie alokowaną tab
 10. Proszę o zdefiniowanie metody `SimpleString substr(size_t pos = 0, size_t count = npos) const`,
     która wykona kopię tekstu aktualnego tekstu od zadanej pozycji o podanej ilości znaków
     (ale jak tekst jest krótszy to krótszej)
+    - `std::string::npos` jest to wartość używana przez `std::string` do oznaczenia iż np. szukany tekst nie został znaleziony. Jest to w praktyce największa wartość, jaką może pomieścić typ służący do indeksowania w typie `std::string`. Czyli tak właściwie jest to `std::numeric_limits<std::size_t>::max()` (nagłówek `#include <limits>`), albo krócej: `static_cast<std::size_t>(-1)`.
 11. Proszę o zdefiniowanie metody `int compare() const`, która będzie porównywała dwa teksty, w następujący sposób:
     - jeśli są równe to aby zwróciła 0
     - jeśli pierwszy tekst jest mniejszy to aby zwróciła wartość ujemną

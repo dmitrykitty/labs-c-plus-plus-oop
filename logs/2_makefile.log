@@ -4,322 +4,322 @@
 [ 42%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 [ 57%] Linking CXX static library ../../../lib/libgtest_main.a
 [ 57%] Built target gtest_main
+[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
 [ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.o
-[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
-/tmp/tmpp_s63u07/student/simpleString.cpp:9:2: warning: #warning "Funkcje sa do zaimplementowania. Instrukcja w pliku naglowkowym" [-Wcpp]
+/tmp/tmpspa0p_49/student/simpleString.cpp:9:2: warning: #warning "Funkcje sa do zaimplementowania. Instrukcja w pliku naglowkowym" [-Wcpp]
     9 | #warning "Funkcje sa do zaimplementowania. Instrukcja w pliku naglowkowym" // po zaimplementowaniu sugeruje usuniecie tej linijki - nie chcemy warningow
       |  ^~~~~~~
-In file included from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
-                 from /tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:3:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionWithDefaultConstructor_expectedAllElementsAreZero_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:44:23: error: ‘class SimpleString’ has no member named ‘size’
+In file included from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
+                 from /tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:3:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionWithDefaultConstructor_expectedAllElementsAreZero_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:44:23: error: ‘class SimpleString’ has no member named ‘size’
    44 |     ASSERT_EQ(0, text.size());
       |                       ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:45:23: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:45:23: error: ‘class SimpleString’ has no member named ‘capacity’
    45 |     ASSERT_EQ(0, text.capacity());
       |                       ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:46:27: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:46:27: error: ‘class SimpleString’ has no member named ‘c_str’
    46 |     ASSERT_STREQ("", text.c_str());
       |                           ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromText_expectedDataCopied_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:55:33: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromText_expectedDataCopied_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:55:33: error: too many initializers for ‘SimpleString’
    55 |     SimpleString text(sourceText);
       |                                 ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:57:36: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:57:36: error: ‘class SimpleString’ has no member named ‘size’
    57 |     ASSERT_EQ(sourceTextSize, text.size());
       |                                    ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:58:36: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:58:36: error: ‘class SimpleString’ has no member named ‘capacity’
    58 |     ASSERT_LE(sourceTextSize, text.capacity());
       |                                    ^~~~~~~~
-In file included from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/gtest-printers.h:122,
-                 from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/gtest-matchers.h:49,
-                 from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h:47,
-                 from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/gtest-death-test.h:43,
-                 from /tmp/tmpp_s63u07/student/unit_tests/lib/googletest/include/gtest/gtest.h:64:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:59:47: error: ‘class SimpleString’ has no member named ‘data’
+In file included from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/gtest-printers.h:122,
+                 from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/gtest-matchers.h:49,
+                 from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/gtest-death-test.h:43,
+                 from /tmp/tmpspa0p_49/student/unit_tests/lib/googletest/include/gtest/gtest.h:64:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:59:47: error: ‘class SimpleString’ has no member named ‘data’
    59 |     ASSERT_TRUE(0 == strncmp(sourceText, text.data(), sourceTextSize));
       |                                               ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:60:35: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:60:35: error: ‘class SimpleString’ has no member named ‘c_str’
    60 |     ASSERT_STREQ(sourceText, text.c_str());
       |                                   ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromEmptyText_expectedEmptyTextCopied_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:68:33: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromEmptyText_expectedEmptyTextCopied_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:68:33: error: too many initializers for ‘SimpleString’
    68 |     SimpleString text(sourceText);
       |                                 ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:70:36: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:70:36: error: ‘class SimpleString’ has no member named ‘size’
    70 |     ASSERT_EQ(sourceTextSize, text.size());
       |                                    ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:71:36: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:71:36: error: ‘class SimpleString’ has no member named ‘capacity’
    71 |     ASSERT_LE(sourceTextSize, text.capacity());
       |                                    ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:72:47: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:72:47: error: ‘class SimpleString’ has no member named ‘data’
    72 |     ASSERT_TRUE(0 == strncmp(sourceText, text.data(), sourceTextSize));
       |                                               ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:73:35: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:73:35: error: ‘class SimpleString’ has no member named ‘c_str’
    73 |     ASSERT_STREQ(sourceText, text.c_str());
       |                                   ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_copyConstruction_expectedDataCopied_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:82:34: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_copyConstruction_expectedDataCopied_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:82:34: error: too many initializers for ‘SimpleString’
    82 |     SimpleString text1(sourceText);
       |                                  ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:85:37: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:85:37: error: ‘class SimpleString’ has no member named ‘size’
    85 |     ASSERT_EQ(sourceTextSize, text1.size());
       |                                     ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:86:37: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:86:37: error: ‘class SimpleString’ has no member named ‘capacity’
    86 |     ASSERT_LE(sourceTextSize, text1.capacity());
       |                                     ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:87:48: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:87:48: error: ‘class SimpleString’ has no member named ‘data’
    87 |     ASSERT_TRUE(0 == strncmp(sourceText, text1.data(), sourceTextSize));
       |                                                ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:88:36: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:88:36: error: ‘class SimpleString’ has no member named ‘c_str’
    88 |     ASSERT_STREQ(sourceText, text1.c_str());
       |                                    ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:90:37: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:90:37: error: ‘class SimpleString’ has no member named ‘size’
    90 |     ASSERT_EQ(sourceTextSize, text2.size());
       |                                     ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:91:37: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:91:37: error: ‘class SimpleString’ has no member named ‘capacity’
    91 |     ASSERT_LE(sourceTextSize, text2.capacity());
       |                                     ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:92:48: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:92:48: error: ‘class SimpleString’ has no member named ‘data’
    92 |     ASSERT_TRUE(0 == strncmp(sourceText, text2.data(), sourceTextSize));
       |                                                ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:93:36: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:93:36: error: ‘class SimpleString’ has no member named ‘c_str’
    93 |     ASSERT_STREQ(sourceText, text2.c_str());
       |                                    ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_destructor_expectedMemoryFreed_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:108:32: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_destructor_expectedMemoryFreed_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:108:32: error: too many initializers for ‘SimpleString’
   108 |         SimpleString text(quote);
       |                                ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_instanceMethod_expectedCountedAllLivingInstances_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:121:32: error: ‘instances’ is not a member of ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_instanceMethod_expectedCountedAllLivingInstances_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:121:32: error: ‘instances’ is not a member of ‘SimpleString’
   121 |     ASSERT_EQ(0, SimpleString::instances());
       |                                ^~~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:125:28: error: ‘class SimpleString’ has no member named ‘instances’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:125:28: error: ‘class SimpleString’ has no member named ‘instances’
   125 |         ASSERT_EQ(1, text1.instances());
       |                            ^~~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:127:32: error: ‘instances’ is not a member of ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:127:32: error: ‘instances’ is not a member of ‘SimpleString’
   127 |     ASSERT_EQ(0, SimpleString::instances());
       |                                ^~~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:131:47: error: ‘instances’ is not a member of ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:131:47: error: ‘instances’ is not a member of ‘SimpleString’
   131 |     ASSERT_EQ(instances2Create, SimpleString::instances());
       |                                               ^~~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:130:18: warning: unused variable ‘textInstances’ [-Wunused-variable]
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:130:18: warning: unused variable ‘textInstances’ [-Wunused-variable]
   130 |     SimpleString textInstances[instances2Create];
       |                  ^~~~~~~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_assign_expectedNewTextSet_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:147:29: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_assign_expectedNewTextSet_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:147:29: error: too many initializers for ‘SimpleString’
   147 |     SimpleString text(quote1);
       |                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:149:34: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:149:34: error: ‘class SimpleString’ has no member named ‘size’
   149 |     ASSERT_EQ(quote1Length, text.size());
       |                                  ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:150:34: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:150:34: error: ‘class SimpleString’ has no member named ‘capacity’
   150 |     ASSERT_LE(quote1Length, text.capacity());
       |                                  ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:151:43: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:151:43: error: ‘class SimpleString’ has no member named ‘data’
   151 |     ASSERT_TRUE(0 == strncmp(quote1, text.data(), quote1Length));
       |                                           ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:152:31: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:152:31: error: ‘class SimpleString’ has no member named ‘c_str’
   152 |     ASSERT_STREQ(quote1, text.c_str());
       |                               ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:154:10: error: ‘class SimpleString’ has no member named ‘assign’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:154:10: error: ‘class SimpleString’ has no member named ‘assign’
   154 |     text.assign(quote2);
       |          ^~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:156:34: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:156:34: error: ‘class SimpleString’ has no member named ‘size’
   156 |     ASSERT_EQ(quote2Length, text.size());
       |                                  ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:157:34: error: ‘class SimpleString’ has no member named ‘capacity’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:157:34: error: ‘class SimpleString’ has no member named ‘capacity’
   157 |     ASSERT_LE(quote2Length, text.capacity());
       |                                  ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:158:43: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:158:43: error: ‘class SimpleString’ has no member named ‘data’
   158 |     ASSERT_TRUE(0 == strncmp(quote2, text.data(), quote2Length));
       |                                           ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:159:31: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:159:31: error: ‘class SimpleString’ has no member named ‘c_str’
   159 |     ASSERT_STREQ(quote2, text.c_str());
       |                               ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_equalToWithoutIgnoringCases_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:168:43: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_equalToWithoutIgnoringCases_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:168:43: error: too many initializers for ‘SimpleString’
   168 |         const SimpleString text1(emptyText);
       |                                           ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:169:43: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:169:43: error: too many initializers for ‘SimpleString’
   169 |         const SimpleString text2(emptyText);
       |                                           ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:171:28: error: ‘const class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:171:28: error: ‘const class SimpleString’ has no member named ‘c_str’
   171 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
       |                            ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:171:43: error: ‘const class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:171:43: error: ‘const class SimpleString’ has no member named ‘c_str’
   171 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
       |                                           ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:172:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:172:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
   172 |         ASSERT_TRUE(text1.equal_to(text2));
       |                           ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:177:44: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:177:44: error: too many initializers for ‘SimpleString’
   177 |         const SimpleString text1(sourceText);
       |                                            ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:178:44: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:178:44: error: too many initializers for ‘SimpleString’
   178 |         const SimpleString text2(sourceText);
       |                                            ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:180:28: error: ‘const class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:180:28: error: ‘const class SimpleString’ has no member named ‘c_str’
   180 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
       |                            ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:180:43: error: ‘const class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:180:43: error: ‘const class SimpleString’ has no member named ‘c_str’
   180 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
       |                                           ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:181:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:181:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
   181 |         ASSERT_TRUE(text1.equal_to(text2));
       |                           ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:187:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:187:45: error: too many initializers for ‘SimpleString’
   187 |         const SimpleString text1(sourceText1);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:188:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:188:45: error: too many initializers for ‘SimpleString’
   188 |         const SimpleString text2(sourceText2);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:190:25: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:190:25: error: ‘const class SimpleString’ has no member named ‘size’
   190 |         ASSERT_EQ(text1.size(), text2.size());
       |                         ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:190:39: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:190:39: error: ‘const class SimpleString’ has no member named ‘size’
   190 |         ASSERT_EQ(text1.size(), text2.size());
       |                                       ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:191:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:191:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
   191 |         ASSERT_FALSE(text1.equal_to(text2));
       |                            ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:197:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:197:45: error: too many initializers for ‘SimpleString’
   197 |         const SimpleString text1(sourceText1);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:198:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:198:45: error: too many initializers for ‘SimpleString’
   198 |         const SimpleString text2(sourceText2);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:200:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:200:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
   200 |         ASSERT_FALSE(text1.equal_to(text2));
       |                            ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_equalToWithDifferentCaseSettings_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:211:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_equalToWithDifferentCaseSettings_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:211:45: error: too many initializers for ‘SimpleString’
   211 |         const SimpleString text1(sourceText1);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:212:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:212:45: error: too many initializers for ‘SimpleString’
   212 |         const SimpleString text2(sourceText2);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:214:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:214:28: error: ‘const class SimpleString’ has no member named ‘equal_to’
   214 |         ASSERT_FALSE(text1.equal_to(text2, /*case_sensitive=*/true));
       |                            ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:218:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:218:45: error: too many initializers for ‘SimpleString’
   218 |         const SimpleString text1(sourceText1);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:219:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:219:45: error: too many initializers for ‘SimpleString’
   219 |         const SimpleString text2(sourceText2);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:221:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:221:27: error: ‘const class SimpleString’ has no member named ‘equal_to’
   221 |         ASSERT_TRUE(text1.equal_to(text2, /*case_sensitive=*/false));
       |                           ^~~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:233:41: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:233:41: error: too many initializers for ‘SimpleString’
   233 |     const SimpleString text1(sourceText1);
       |                                         ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:234:41: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:234:41: error: too many initializers for ‘SimpleString’
   234 |     const SimpleString text2(sourceText2);
       |                                         ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
   237 |     textMerged.append(text2);
       |                ^~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:239:26: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:239:26: error: ‘class SimpleString’ has no member named ‘size’
   239 |     ASSERT_EQ(textMerged.size(), text1.size() + text2.size());
       |                          ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:239:40: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:239:40: error: ‘const class SimpleString’ has no member named ‘size’
   239 |     ASSERT_EQ(textMerged.size(), text1.size() + text2.size());
       |                                        ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:239:55: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:239:55: error: ‘const class SimpleString’ has no member named ‘size’
   239 |     ASSERT_EQ(textMerged.size(), text1.size() + text2.size());
       |                                                       ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:240:61: error: ‘class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:240:61: error: ‘class SimpleString’ has no member named ‘data’
   240 |     ASSERT_TRUE(0 == strncmp(mergedText.c_str(), textMerged.data(), mergedText.size()));
       |                                                             ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:241:49: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:241:49: error: ‘class SimpleString’ has no member named ‘c_str’
   241 |     ASSERT_STREQ(mergedText.c_str(), textMerged.c_str());
       |                                                 ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:250:45: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:250:45: error: too many initializers for ‘SimpleString’
   250 |     const SimpleString entireText(sourceText);
       |                                             ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
   251 |     const SimpleString partOfText = entireText.substr(startingPosition);
       |                                                ^~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:255:26: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:255:26: error: ‘const class SimpleString’ has no member named ‘size’
   255 |     ASSERT_EQ(partOfText.size(), expectedTestPart.size());
       |                          ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:256:67: error: ‘const class SimpleString’ has no member named ‘data’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:256:67: error: ‘const class SimpleString’ has no member named ‘data’
   256 |     ASSERT_TRUE(0 == strncmp(expectedTestPart.c_str(), partOfText.data(), expectedTestPart.size()));
       |                                                                   ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_movingConstructor_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:264:33: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_movingConstructor_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:264:33: error: too many initializers for ‘SimpleString’
   264 |     SimpleString text(sourceText);
       |                                 ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:268:23: error: ‘class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:268:23: error: ‘class SimpleString’ has no member named ‘size’
   268 |     ASSERT_EQ(0, text.size());
       |                       ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:269:27: error: ‘class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:269:27: error: ‘class SimpleString’ has no member named ‘c_str’
   269 |     ASSERT_STREQ("", text.c_str());
       |                           ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:271:45: error: ‘const class SimpleString’ has no member named ‘size’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:271:45: error: ‘const class SimpleString’ has no member named ‘size’
   271 |     ASSERT_EQ(strlen(sourceText), movedText.size());
       |                                             ^~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:272:40: error: ‘const class SimpleString’ has no member named ‘c_str’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:272:40: error: ‘const class SimpleString’ has no member named ‘c_str’
   272 |     ASSERT_STREQ(sourceText, movedText.c_str());
       |                                        ^~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:279:326: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:279:326: error: too many initializers for ‘SimpleString’
   279 |         const SimpleString text1("Oczywiście te podwyżki podatków to dla naszego dobra, bo pieniądze, jak wiadomo, psuja charakter. Im więcej pieniędzy rzad nam skonfiskuje, tym lepiej dla nas. Tak w każdym razie myślą politycy, którzy wprawdzie nieustannie pragną naszego dobra, ale nam niestety już coraz mniej go zostało.");
       |                                                                                                                                                                                                                                                                                                                                      ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
   281 |         ASSERT_EQ(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:286:63: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:286:63: error: too many initializers for ‘SimpleString’
   286 |         const SimpleString text1("Niesprawiedliwy ten sedzia!");
       |                                                               ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:287:179: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:287:179: error: too many initializers for ‘SimpleString’
   287 |         const SimpleString text2("Niesprawiedliwy to ktoś, kto źle używa swoich dóbr, albo uzurpuje sobie cudze dobra, albo do tego co posiada, doszedł w sposób niesprawiedliwy.");
       |                                                                                                                                                                                   ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
   288 |         ASSERT_GT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:292:55: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:292:55: error: too many initializers for ‘SimpleString’
   292 |         const SimpleString text1("Sedzia sprawiedliwy");
       |                                                       ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:293:50: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:293:50: error: too many initializers for ‘SimpleString’
   293 |         const SimpleString text2("Sedzia kalosz!");
       |                                                  ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
   294 |         ASSERT_LT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:301:40: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:301:40: error: too many initializers for ‘SimpleString’
   301 |         const SimpleString text1("Mama");
       |                                        ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:302:40: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:302:40: error: too many initializers for ‘SimpleString’
   302 |         const SimpleString text2("mama");
       |                                        ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
   303 |         ASSERT_EQ(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:308:63: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:308:63: error: too many initializers for ‘SimpleString’
   308 |         const SimpleString text1("niesprawiedliwy ten sedzia!");
       |                                                               ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:309:179: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:309:179: error: too many initializers for ‘SimpleString’
   309 |         const SimpleString text2("Niesprawiedliwy to ktoś, kto źle używa swoich dóbr, albo uzurpuje sobie cudze dobra, albo do tego co posiada, doszedł w sposób niesprawiedliwy.");
       |                                                                                                                                                                                   ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
   310 |         ASSERT_GT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:314:55: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:314:55: error: too many initializers for ‘SimpleString’
   314 |         const SimpleString text1("Sedzia sprawiedliwy");
       |                                                       ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:315:50: error: too many initializers for ‘SimpleString’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:315:50: error: too many initializers for ‘SimpleString’
   315 |         const SimpleString text2("sedzia kalosz!");
       |                                                  ^
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
   316 |         ASSERT_LT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp: At global scope:
-/tmp/tmpp_s63u07/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp: At global scope:
+/tmp/tmpspa0p_49/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
    29 | void operator delete[](void* memory) noexcept
       |      ^~~~~~~~
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:76: unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o] Error 1

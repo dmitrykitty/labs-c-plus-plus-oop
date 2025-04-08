@@ -6,5 +6,13 @@ using namespace std;
 
 #include "simpleString.h"
 
-#warning "Funkcje sa do zaimplementowania. Instrukcja w pliku naglowkowym" // po zaimplementowaniu sugeruje usuniecie tej linijki - nie chcemy warningow
-
+bool SimpleString::equal_to(const SimpleString &other, bool case_sensitive) const {
+    if (this == &other) return true;
+    if (size_ == other.size_ && capacity_ == other.capacity_) {
+        for (std::size_t i = 0; i < size_; i++) {
+            if (data_[i] != other.data_[i]) return false;
+        }
+        return true;
+    }
+    return false;
+}

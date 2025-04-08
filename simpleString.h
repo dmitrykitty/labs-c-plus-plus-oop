@@ -121,10 +121,47 @@ ________________________________________________________________________________
 
 #include <cstddef> // std::size_t
 
-class SimpleString
-{
+class SimpleString {
+protected:
+    inline static std::size_t instances_{};
+    char* data_{nullptr};
+    std::size_t size_{};
+    std::size_t capacity_{};
 public:
-    // TODO: ...
+    SimpleString() {
+        instances_++;
+    };
+    SimpleString(const char* text) {
+        size_ = strlen(text);
+        capacity_ = size_ + 1;
+        data_ = new char[capacity_];
+        strcpy(data_, text);
+        instances_++;
+    }
+
+    SimpleString(const SimpleString& other) {
+        size_ = other.size_;
+        capacity_ = other.capacity_;
+        data_ = new char[capacity_];
+        strcpy(data_, other.data_);
+        instances_++;
+    }
+
+    ~SimpleString() {
+        if (data_ != nullptr) {
+            delete[] data_;
+            data_ = nullptr;
+        }
+        instances_--;
+    }
+
+    size_t size() const { return size_; }
+    std::string c_str() const { return std::string(data_, size_); }
+    static std::size_t instances() { return instances_; }
+
+    bool equal_to(const SimpleString& other, bool case_sensitive=true ) const;
+
+
 
 private:
     // TODO: ...

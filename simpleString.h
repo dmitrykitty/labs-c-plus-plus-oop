@@ -124,44 +124,41 @@ ________________________________________________________________________________
 class SimpleString {
 protected:
     inline static std::size_t instances_{};
-    char* data_{nullptr};
-    std::size_t size_{};
-    std::size_t capacity_{};
+    char *data_;
+    std::size_t size_;
+    std::size_t capacity_;
+
 public:
-    SimpleString() {
+    SimpleString(): data_(new char[1]{}), size_(0), capacity_(0) {
         instances_++;
     };
-    SimpleString(const char* text) {
-        size_ = strlen(text);
-        capacity_ = size_ + 1;
-        data_ = new char[capacity_];
-        strcpy(data_, text);
+
+    SimpleString(const char *text): data_(new char[strlen(text) + 1]), size_(strlen(text))
+                                    , capacity_(strlen(text) + 1) {
+        memcpy(data_, text, size_ + 1);
         instances_++;
     }
 
-    SimpleString(const SimpleString& other) {
-        size_ = other.size_;
-        capacity_ = other.capacity_;
-        data_ = new char[capacity_];
-        strcpy(data_, other.data_);
+    SimpleString(const SimpleString &other): data_(new char[other.capacity_]), size_(other.size_)
+                                             , capacity_(other.capacity_) {
+        memcpy(data_, other.data_, size_ + 1);
         instances_++;
     }
 
     ~SimpleString() {
         if (data_ != nullptr) {
             delete[] data_;
-            data_ = nullptr;
         }
         instances_--;
     }
 
     size_t size() const { return size_; }
-    std::string c_str() const { return std::string(data_, size_); }
+    size_t capacity() const { return capacity_; }
+    char *data() const { return data_; }
+    char* c_str() const { return data_; }
     static std::size_t instances() { return instances_; }
 
-    bool equal_to(const SimpleString& other, bool case_sensitive=true ) const;
-
-
+    bool equal_to(const SimpleString &other, bool case_sensitive = true) const;
 
 private:
     // TODO: ...

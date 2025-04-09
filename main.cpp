@@ -1,4 +1,6 @@
 #include <iostream>
+
+
 #include "simpleString.h"
 
 /**
@@ -12,10 +14,10 @@
 **/
 
 /// @todo Uzupelnij swoje dane:
-constexpr const char* const FIRSTNAME = "";
-constexpr const char* const SURNAME   = "";
-constexpr const char* const MAIL    = "";
-constexpr const char* const BOOK_ID = "";
+constexpr const char* const FIRSTNAME = "vvv";
+constexpr const char* const SURNAME   = "vvv";
+constexpr const char* const MAIL    = "dima@ddd";
+constexpr const char* const BOOK_ID = "4536543";
 
 constexpr const char* const TEACHER_MAIL = "bazior[at]agh.edu.pl"; // change if not correct
 
@@ -27,6 +29,9 @@ int main()
               << "make Your teacher: " << TEACHER_MAIL << " proud of you!" << std::endl;
               
     validateStudentsInfo();
+
+    char ar[] = "My love";
+    std::cout << strlen(ar) << std::endl;
 }
 
 

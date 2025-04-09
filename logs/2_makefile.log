@@ -6,336 +6,46 @@
 [ 57%] Built target gtest_main
 [ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
 [ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.o
-/tmp/tmp7qugkonp/student/simpleString.cpp: In member function ‘bool SimpleString::equal_to(const SimpleString&, bool) const’:
-/tmp/tmp7qugkonp/student/simpleString.cpp:9:61: warning: unused parameter ‘case_sensitive’ [-Wunused-parameter]
+/tmp/tmpkq2paovf/student/simpleString.cpp: In member function ‘bool SimpleString::equal_to(const SimpleString&, bool) const’:
+/tmp/tmpkq2paovf/student/simpleString.cpp:9:61: warning: unused parameter ‘case_sensitive’ [-Wunused-parameter]
     9 | bool SimpleString::equal_to(const SimpleString &other, bool case_sensitive) const {
       |                                                        ~~~~~^~~~~~~~~~~~~~
-In file included from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
-                 from /tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:3:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionWithDefaultConstructor_expectedAllElementsAreZero_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:45:23: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-   45 |     ASSERT_EQ(0, text.capacity());
-      |                       ^~~~~~~~
-In file included from /tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:6:
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:46:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [3], const char [13], const char [1], std::string)’
-   46 |     ASSERT_STREQ("", text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char [1]’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromText_expectedDataCopied_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:58:36: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-   58 |     ASSERT_LE(sourceTextSize, text.capacity());
-      |                                    ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-In file included from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest-printers.h:122,
-                 from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest-matchers.h:49,
-                 from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h:47,
-                 from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest-death-test.h:43,
-                 from /tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:64:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:59:47: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-   59 |     ASSERT_TRUE(0 == strncmp(sourceText, text.data(), sourceTextSize));
-      |                                               ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:59:47: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:60:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [11], const char [13], const char* const&, std::string)’
-   60 |     ASSERT_STREQ(sourceText, text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char* const’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_constructionFromEmptyText_expectedEmptyTextCopied_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:71:36: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-   71 |     ASSERT_LE(sourceTextSize, text.capacity());
-      |                                    ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:72:47: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-   72 |     ASSERT_TRUE(0 == strncmp(sourceText, text.data(), sourceTextSize));
-      |                                               ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:72:47: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:73:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [11], const char [13], const char* const&, std::string)’
-   73 |     ASSERT_STREQ(sourceText, text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char* const’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_copyConstruction_expectedDataCopied_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:86:37: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-   86 |     ASSERT_LE(sourceTextSize, text1.capacity());
-      |                                     ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:87:48: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-   87 |     ASSERT_TRUE(0 == strncmp(sourceText, text1.data(), sourceTextSize));
-      |                                                ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:87:48: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:88:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [11], const char [14], const char* const&, std::string)’
-   88 |     ASSERT_STREQ(sourceText, text1.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char* const’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:91:37: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-   91 |     ASSERT_LE(sourceTextSize, text2.capacity());
-      |                                     ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:92:48: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-   92 |     ASSERT_TRUE(0 == strncmp(sourceText, text2.data(), sourceTextSize));
-      |                                                ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:92:48: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:93:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [11], const char [14], const char* const&, std::string)’
-   93 |     ASSERT_STREQ(sourceText, text2.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char* const’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_assign_expectedNewTextSet_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:150:34: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-  150 |     ASSERT_LE(quote1Length, text.capacity());
-      |                                  ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:151:43: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-  151 |     ASSERT_TRUE(0 == strncmp(quote1, text.data(), quote1Length));
-      |                                           ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:151:43: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:152:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [7], const char [13], const char [164], std::string)’
-  152 |     ASSERT_STREQ(quote1, text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char [164]’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:154:10: error: ‘class SimpleString’ has no member named ‘assign’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_assign_expectedNewTextSet_Test::TestBody()’:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:154:10: error: ‘class SimpleString’ has no member named ‘assign’
   154 |     text.assign(quote2);
       |          ^~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:157:34: error: ‘class SimpleString’ has no member named ‘capacity’; did you mean ‘std::size_t SimpleString::capacity_’? (not accessible from this context)
-  157 |     ASSERT_LE(quote2Length, text.capacity());
-      |                                  ^~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:129:17: note: declared protected here
-  129 |     std::size_t capacity_{};
-      |                 ^~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:158:43: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-  158 |     ASSERT_TRUE(0 == strncmp(quote2, text.data(), quote2Length));
-      |                                           ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:158:43: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:159:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [7], const char [13], const char [42], std::string)’
-  159 |     ASSERT_STREQ(quote2, text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char [42]’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_equalToWithoutIgnoringCases_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:171:9: error: no matching function for call to ‘CmpHelperSTREQ(const char [14], const char [14], std::string, std::string)’
-  171 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
-      |         ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:55: note:   no known conversion for argument 3 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:180:9: error: no matching function for call to ‘CmpHelperSTREQ(const char [14], const char [14], std::string, std::string)’
-  180 |         ASSERT_STREQ(text1.c_str(), text2.c_str());
-      |         ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:55: note:   no known conversion for argument 3 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
   237 |     textMerged.append(text2);
       |                ^~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:240:61: error: ‘class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-  240 |     ASSERT_TRUE(0 == strncmp(mergedText.c_str(), textMerged.data(), mergedText.size()));
-      |                                                             ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:240:61: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:241:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [19], const char [19], const char*, std::string)’
-  241 |     ASSERT_STREQ(mergedText.c_str(), textMerged.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char*’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
   251 |     const SimpleString partOfText = entireText.substr(startingPosition);
       |                                                ^~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:256:67: error: ‘const class SimpleString’ has no member named ‘data’; did you mean ‘data_’?
-  256 |     ASSERT_TRUE(0 == strncmp(expectedTestPart.c_str(), partOfText.data(), expectedTestPart.size()));
-      |                                                                   ^~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:256:67: error: ‘char* SimpleString::data_’ is protected within this context
-/tmp/tmp7qugkonp/student/unit_tests/../simpleString.h:127:11: note: declared protected here
-  127 |     char* data_{nullptr};
-      |           ^~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_movingConstructor_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:269:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [3], const char [13], const char [1], std::string)’
-  269 |     ASSERT_STREQ("", text.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char [1]’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:272:5: error: no matching function for call to ‘CmpHelperSTREQ(const char [11], const char [18], const char [50], std::string)’
-  272 |     ASSERT_STREQ(sourceText, movedText.c_str());
-      |     ^
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1487:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const char*, const char*)’
- 1487 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1489:71: note:   no known conversion for argument 4 from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘const char*’
- 1489 |                                           const char* s1, const char* s2);
-      |                                                           ~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1515:28: note: candidate: ‘testing::AssertionResult testing::internal::CmpHelperSTREQ(const char*, const char*, const wchar_t*, const wchar_t*)’
- 1515 | GTEST_API_ AssertionResult CmpHelperSTREQ(const char* s1_expression,
-      |                            ^~~~~~~~~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/lib/googletest/include/gtest/gtest.h:1517:58: note:   no known conversion for argument 3 from ‘const char [50]’ to ‘const wchar_t*’
- 1517 |                                           const wchar_t* s1, const wchar_t* s2);
-      |                                           ~~~~~~~~~~~~~~~^~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
+In file included from /tmp/tmpkq2paovf/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
+                 from /tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:3:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
   281 |         ASSERT_EQ(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
   288 |         ASSERT_GT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
   294 |         ASSERT_LT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
   303 |         ASSERT_EQ(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
   310 |         ASSERT_GT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
   316 |         ASSERT_LT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp: At global scope:
-/tmp/tmp7qugkonp/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: At global scope:
+/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
    29 | void operator delete[](void* memory) noexcept
       |      ^~~~~~~~
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:76: unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o] Error 1

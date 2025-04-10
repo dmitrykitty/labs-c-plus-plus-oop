@@ -15,10 +15,10 @@
 -- Looking for __ubsan_handle_add_overflow in ubsan
 -- Looking for __ubsan_handle_add_overflow in ubsan - found
 -- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
-Katalog do zbudowanego projektu: /tmp/tmpxer2odrl/student/build
- + Znaleziono nagłówki: /tmp/tmpxer2odrl/student/simpleString.h
- + Znaleziono źródła: /tmp/tmpxer2odrl/student/main.cpp;/tmp/tmpxer2odrl/student/simpleString.cpp
- + Znaleziono źródła bez main.cpp: /tmp/tmpxer2odrl/student/simpleString.cpp
+Katalog do zbudowanego projektu: /tmp/tmpg6b5nzax/student/build
+ + Znaleziono nagłówki: /tmp/tmpg6b5nzax/student/simpleString.h
+ + Znaleziono źródła: /tmp/tmpg6b5nzax/student/main.cpp;/tmp/tmpg6b5nzax/student/simpleString.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmpg6b5nzax/student/simpleString.cpp
 	* valgrind found: /usr/bin/valgrind
 	* cppcheck found: /usr/local/bin/cppcheck
 -- Looking for pthread.h
@@ -26,8 +26,8 @@ Katalog do zbudowanego projektu: /tmp/tmpxer2odrl/student/build
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE  
- + Znaleziono pliki testów: /tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp
+ + Znaleziono pliki testów: /tmp/tmpg6b5nzax/student/unit_tests/simpleStringTests.cpp
  + katalog nagłówków: 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmpxer2odrl/student/build
+-- Build files have been written to: /tmp/tmpg6b5nzax/student/build

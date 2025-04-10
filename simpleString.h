@@ -123,6 +123,8 @@ ________________________________________________________________________________
 #include <cstring>
 
 class SimpleString {
+    enum { npos = static_cast<std::size_t>(-1) };
+
 protected:
     inline static std::size_t instances_{};
     char *data_;
@@ -146,8 +148,15 @@ public:
         instances_++;
     }
 
+    SimpleString(SimpleString &&other) noexcept: data_(other.data_), size_(other.size_), capacity_(other.capacity_) {
+        other.data_ = new char[0];
+        other.size_ = 0;
+        other.capacity_ = 0;
+    }
+
+
     ~SimpleString() {
-            delete[] data_;
+        delete[] data_;
 
         instances_--;
     }
@@ -155,13 +164,20 @@ public:
     size_t size() const { return size_; }
     size_t capacity() const { return capacity_; }
     char *data() const { return data_; }
-    char* c_str() const { return data_; }
+    char *c_str() const { return data_; }
     static std::size_t instances() { return instances_; }
 
     bool equal_to(const SimpleString &other, bool case_sensitive = true) const;
+
     void assign(const char *text);
-    void swap(SimpleString& other);
+
+    void swap(SimpleString &other) noexcept;
+
     void append(const SimpleString &other);
+
+    SimpleString substr(std::size_t start = 0, std::size_t count = npos) const;
+
+    int compare(const SimpleString &other, bool case_sensitive = true) const;
 
 private:
     // TODO: ...

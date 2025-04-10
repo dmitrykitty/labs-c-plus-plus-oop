@@ -1,0 +1,82 @@
+Running main() from /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest_main.cc
+[==========] Running 14 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 14 tests from SimpleStringTester
+[ RUN      ] SimpleStringTester.constructionWithDefaultConstructor_expectedAllElementsAreZero
+=================================================================
+==179==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000003b1 at pc 0x7ffa453783f2 bp 0x7ffe951d49c0 sp 0x7ffe951d4168
+READ of size 2 at 0x6020000003b1 thread T0
+    #0 0x7ffa453783f1 in __interceptor_strlen ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:461
+    #1 0x5581bece3f90 in std::char_traits<char>::length(char const*) /usr/include/c++/13/bits/char_traits.h:409
+    #2 0x5581bece6a31 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) /usr/include/c++/13/bits/basic_string.h:638
+    #3 0x5581bedc4b81 in testing::internal::UniversalTersePrinter<char const*>::Print(char const*, std::ostream*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/include/gtest/gtest-printers.h:1096
+    #4 0x5581bedeaa82 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > testing::PrintToString<char const*>(char const* const&) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/include/gtest/gtest-printers.h:1225
+    #5 0x5581bed3e442 in testing::internal::CmpHelperSTREQ(char const*, char const*, char const*, char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:1778
+    #6 0x5581beccf1f2 in SimpleStringTester_constructionWithDefaultConstructor_expectedAllElementsAreZero_Test::TestBody() /tmp/tmpnfe8u9mu/student/unit_tests/simpleStringTests.cpp:46
+    #7 0x5581bee37ca5 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #8 0x5581bee0a989 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #9 0x5581bed49e09 in testing::Test::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #10 0x5581bed4dbd6 in testing::TestInfo::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #11 0x5581bed52481 in testing::TestSuite::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #12 0x5581bed9df95 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #13 0x5581bee3eb99 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #14 0x5581bee10e78 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #15 0x5581bed90403 in testing::UnitTest::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #16 0x5581beea03e6 in RUN_ALL_TESTS() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #17 0x5581beea0233 in main /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #18 0x7ffa44788d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #19 0x7ffa44788e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #20 0x5581becce964 in _start (/tmp/tmpnfe8u9mu/student/build/bin/unit_tests+0x269964) (BuildId: 1ba0a8d55a67e58bc1f49c37ee50d054973e3d3b)
+
+0x6020000003b1 is located 0 bytes after 1-byte region [0x6020000003b0,0x6020000003b1)
+allocated by thread T0 here:
+    #0 0x7ffa453eefdf in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:69
+    #1 0x5581beccea57 in operator new[](unsigned long) /tmp/tmpnfe8u9mu/student/unit_tests/simpleStringTests.cpp:27
+    #2 0x5581bece4fea in SimpleString::SimpleString() /tmp/tmpnfe8u9mu/student/simpleString.h:135
+    #3 0x5581beccebd1 in SimpleStringTester_constructionWithDefaultConstructor_expectedAllElementsAreZero_Test::TestBody() /tmp/tmpnfe8u9mu/student/unit_tests/simpleStringTests.cpp:42
+    #4 0x5581bee37ca5 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #5 0x5581bee0a989 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #6 0x5581bed49e09 in testing::Test::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #7 0x5581bed4dbd6 in testing::TestInfo::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #8 0x5581bed52481 in testing::TestSuite::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #9 0x5581bed9df95 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #10 0x5581bee3eb99 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #11 0x5581bee10e78 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #12 0x5581bed90403 in testing::UnitTest::Run() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #13 0x5581beea03e6 in RUN_ALL_TESTS() /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #14 0x5581beea0233 in main /tmp/tmpnfe8u9mu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #15 0x7ffa44788d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:461 in __interceptor_strlen
+Shadow bytes around the buggy address:
+  0x602000000100: fa fa fd fa fa fa fd fa fa fa 00 fa fa fa fd fd
+  0x602000000180: fa fa fd fa fa fa 00 fa fa fa fd fd fa fa 00 fa
+  0x602000000200: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x602000000280: fa fa 00 fa fa fa 00 fa fa fa 00 fa fa fa 00 fa
+  0x602000000300: fa fa 00 fa fa fa 00 fa fa fa 00 00 fa fa 00 fa
+=>0x602000000380: fa fa 00 00 fa fa[01]fa fa fa fa fa fa fa fa fa
+  0x602000000400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000580: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000600: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==179==ABORTING

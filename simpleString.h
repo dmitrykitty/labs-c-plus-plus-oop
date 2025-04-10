@@ -120,6 +120,7 @@ ________________________________________________________________________________
 **/
 
 #include <cstddef> // std::size_t
+#include <cstring>
 
 class SimpleString {
 protected:
@@ -129,7 +130,7 @@ protected:
     std::size_t capacity_;
 
 public:
-    SimpleString(): data_(new char[1]{}), size_(0), capacity_(0) {
+    SimpleString(): data_(new char[0]), size_(0), capacity_(0) {
         instances_++;
     };
 
@@ -146,9 +147,8 @@ public:
     }
 
     ~SimpleString() {
-        if (data_ != nullptr) {
             delete[] data_;
-        }
+
         instances_--;
     }
 
@@ -159,6 +159,8 @@ public:
     static std::size_t instances() { return instances_; }
 
     bool equal_to(const SimpleString &other, bool case_sensitive = true) const;
+    void assign(const char *text);
+    void swap(SimpleString& other);
 
 private:
     // TODO: ...

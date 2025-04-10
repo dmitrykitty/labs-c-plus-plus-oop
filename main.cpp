@@ -32,6 +32,7 @@ int main()
 
     char ar[] = "My love";
     std::cout << strlen(ar) << std::endl;
+    std::string k = "";
 }
 
 

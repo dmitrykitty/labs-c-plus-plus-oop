@@ -53,11 +53,11 @@ void SimpleString::append(const SimpleString &other) {
 
 
 SimpleString SimpleString::substr(std::size_t start, std::size_t count) const {
-    if (start > size_)
+    if (start >= size_)
         return SimpleString();
 
-    std::size_t max_count = start + count > size_ ? size_ - start : count;
-    char *sub_data_ = new char[max_count + 1];
+    std::size_t max_count = std::min(count, size_ - start);
+    char* sub_data_ = new char[max_count + 1];
     memcpy(sub_data_, data_ + start, max_count);
     sub_data_[max_count] = '\0';
 

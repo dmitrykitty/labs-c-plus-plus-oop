@@ -152,6 +152,7 @@ public:
         other.data_ = new char[0];
         other.size_ = 0;
         other.capacity_ = 0;
+        instances_++;
     }
 
 

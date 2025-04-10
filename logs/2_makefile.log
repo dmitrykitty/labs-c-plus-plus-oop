@@ -4,48 +4,40 @@
 [ 42%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 [ 57%] Linking CXX static library ../../../lib/libgtest_main.a
 [ 57%] Built target gtest_main
-[ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
 [ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.o
-/tmp/tmpkq2paovf/student/simpleString.cpp: In member function ‘bool SimpleString::equal_to(const SimpleString&, bool) const’:
-/tmp/tmpkq2paovf/student/simpleString.cpp:9:61: warning: unused parameter ‘case_sensitive’ [-Wunused-parameter]
-    9 | bool SimpleString::equal_to(const SimpleString &other, bool case_sensitive) const {
-      |                                                        ~~~~~^~~~~~~~~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_assign_expectedNewTextSet_Test::TestBody()’:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:154:10: error: ‘class SimpleString’ has no member named ‘assign’
-  154 |     text.assign(quote2);
-      |          ^~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
+[ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_appendOneTextAnotherOne_expectedBothTextMerged_Test::TestBody()’:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:237:16: error: ‘class SimpleString’ has no member named ‘append’
   237 |     textMerged.append(text2);
       |                ^~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_substr_expectedPartOfTextReturned_Test::TestBody()’:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:251:48: error: ‘const class SimpleString’ has no member named ‘substr’
   251 |     const SimpleString partOfText = entireText.substr(startingPosition);
       |                                                ^~~~~~
-In file included from /tmp/tmpkq2paovf/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
-                 from /tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:3:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
+In file included from /tmp/tmpxer2odrl/student/unit_tests/lib/googletest/include/gtest/gtest.h:71,
+                 from /tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:3:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:281:28: error: ‘const class SimpleString’ has no member named ‘compare’
   281 |         ASSERT_EQ(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:288:28: error: ‘const class SimpleString’ has no member named ‘compare’
   288 |         ASSERT_GT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:294:28: error: ‘const class SimpleString’ has no member named ‘compare’
   294 |         ASSERT_LT(0, text1.compare(text2));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp: In member function ‘virtual void SimpleStringTester_compareTextWithoutCases_expectedComparingWorks_Test::TestBody()’:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:303:28: error: ‘const class SimpleString’ has no member named ‘compare’
   303 |         ASSERT_EQ(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:310:28: error: ‘const class SimpleString’ has no member named ‘compare’
   310 |         ASSERT_GT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:316:28: error: ‘const class SimpleString’ has no member named ‘compare’
   316 |         ASSERT_LT(0, text1.compare(text2, /*case_sensitive=*/false));
       |                            ^~~~~~~
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp: At global scope:
-/tmp/tmpkq2paovf/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp: At global scope:
+/tmp/tmpxer2odrl/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
    29 | void operator delete[](void* memory) noexcept
       |      ^~~~~~~~
 make[3]: *** [unit_tests/CMakeFiles/unit_tests.dir/build.make:76: unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o] Error 1

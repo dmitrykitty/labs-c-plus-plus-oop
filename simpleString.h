@@ -161,6 +161,7 @@ public:
     bool equal_to(const SimpleString &other, bool case_sensitive = true) const;
     void assign(const char *text);
     void swap(SimpleString& other);
+    void append(const SimpleString &other);
 
 private:
     // TODO: ...

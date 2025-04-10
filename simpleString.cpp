@@ -35,3 +35,18 @@ void SimpleString::swap(SimpleString &other) {
     std::swap(capacity_, other.capacity_);
     std::swap(data_, other.data_);
 }
+
+
+void SimpleString::append(const SimpleString &other) {
+    std::size_t new_size_ = size_ + other.size_;
+    char *new_data_ = new char[new_size_ + 1];
+
+    memcpy(new_data_, data_, size_);
+    memcpy(new_data_ + size_, other.data_, other.size_);
+    new_data_[new_size_] = '\0';
+
+    delete [] data_;
+    size_ = new_size_;
+    capacity_ = size_ + 1;
+    data_ = new_data_;
+}

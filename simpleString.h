@@ -132,7 +132,7 @@ protected:
     std::size_t capacity_;
 
 public:
-    SimpleString(): data_(new char[0]), size_(0), capacity_(0) {
+    SimpleString(): data_(nullptr), size_(0), capacity_(0) {
         instances_++;
     };
 
@@ -149,7 +149,7 @@ public:
     }
 
     SimpleString(SimpleString &&other) noexcept: data_(other.data_), size_(other.size_), capacity_(other.capacity_) {
-        other.data_ = new char[0];
+        other.data_ = nullptr;
         other.size_ = 0;
         other.capacity_ = 0;
         instances_++;
@@ -165,7 +165,7 @@ public:
     size_t size() const { return size_; }
     size_t capacity() const { return capacity_; }
     char *data() const { return data_; }
-    char *c_str() const { return data_; }
+    const char *c_str() const { return (data_ != nullptr) ? data_ : ""; }
     static std::size_t instances() { return instances_; }
 
     bool equal_to(const SimpleString &other, bool case_sensitive = true) const;

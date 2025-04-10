@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cstring>
 #include <utility> // std::exchange
-using namespace std;
+
 
 #include "simpleString.h"
 

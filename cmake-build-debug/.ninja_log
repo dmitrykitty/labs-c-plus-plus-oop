@@ -46,3 +46,6 @@
 17	799	7660178452730611	unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.obj	babd6d62eff8c351
 9	2113	7660178452654189	unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.obj	578befc0c88099a7
 2113	6855	7660178473690251	bin/unit_tests.exe	d63fdddf0f3a52a7
+18	1069	7660191776826806	unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.obj	babd6d62eff8c351
+11	2596	7660191776752865	unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.obj	578befc0c88099a7
+2597	7532	7660191802604239	bin/unit_tests.exe	d63fdddf0f3a52a7

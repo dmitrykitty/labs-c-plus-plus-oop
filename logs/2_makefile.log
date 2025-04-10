@@ -6,7 +6,7 @@
 [ 57%] Built target gtest_main
 [ 71%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/simpleStringTests.cpp.o
 [ 85%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/simpleString.cpp.o
-/tmp/tmpnfe8u9mu/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
+/tmp/tmpdhnhhr70/student/unit_tests/simpleStringTests.cpp:29:6: warning: the program should also define ‘void operator delete [](void*, std::size_t)’ [-Wsized-deallocation]
    29 | void operator delete[](void* memory) noexcept
       |      ^~~~~~~~
 [100%] Linking CXX executable ../bin/unit_tests
